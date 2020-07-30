@@ -17,6 +17,11 @@ module.exports = {
     },
     project: {
       entry: path.resolve(__appsPath, './project/index.js')
+    },
+    main: {
+      entry: './src/main.js'
     }
-  }
+  },
+
+  lintOnSave: false
 }
