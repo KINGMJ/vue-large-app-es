@@ -11,5 +11,9 @@
 </script>
 
 <style scoped>
-
+  div {
+    width: 100%;
+    background: #fff;
+    padding-top: 20px;
+  }
 </style>
