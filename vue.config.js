@@ -18,5 +18,7 @@ module.exports = {
     project: {
       entry: path.resolve(__appsPath, './project/index.js')
     }
-  }
+  },
+
+  lintOnSave: false
 }
