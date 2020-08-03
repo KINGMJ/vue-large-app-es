@@ -16,7 +16,7 @@ module.exports = {
       entry: path.resolve(__appsPath, './profile/index.js')
     },
     project: {
-      entry: path.resolve(__appsPath, './project/index.js')
+      entry: path.resolve(__appsPath, './project/core/index.js')
     }
   },
 

@@ -5,9 +5,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'project-boards'
-  }
+export default {
+  name: 'ProjectBoards'
+}
 </script>
 
 <style scoped>
