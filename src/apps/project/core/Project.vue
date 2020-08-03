@@ -10,8 +10,8 @@
 
 <script>
 import AppHeader from '@/apps/shared/pages/AppHeader.vue'
-import ProjectInfo from './project-info/pages/ProjectInfo.vue'
-import ProjectTabs from './shared/components/ProjectTabs.vue'
+import ProjectInfo from '../project-info/pages/ProjectInfo.vue'
+import ProjectTabs from '../shared/components/ProjectTabs.vue'
 
 export default {
   name: 'Project',
