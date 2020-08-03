@@ -1,44 +1,55 @@
 <template>
   <div>
-    <router-link v-for="tab in tabs" :to="tab.route">{{tab.title}}</router-link>
+    <router-link
+      v-for="tab in tabs"
+      :key="tab.id"
+      :to="tab.route"
+    >
+      {{ tab.title }}
+    </router-link>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'project-tabs',
-    data () {
-      return {
-        tabs: [
-          {
-            title: '看板',
-            route: '/board'
-          },
-          {
-            title: '成员',
-            route: '/member'
-          },
-          {
-            title: '文件',
-            route: '/file'
-          },
-          {
-            title: '统计',
-            route: '/stat'
-          },
-          {
-            title: '设置',
-            route: '/setting'
-          },
-        ]
-      }
+export default {
+  name: 'ProjectTabs',
+  data () {
+    return {
+      tabs: [
+        {
+          id: 1,
+          title: '看板',
+          route: '/board'
+        },
+        {
+          id: 2,
+          title: '成员',
+          route: '/member'
+        },
+        {
+          id: 3,
+          title: '文件',
+          route: '/file'
+        },
+        {
+          id: 4,
+          title: '统计',
+          route: '/stat'
+        },
+        {
+          id: 5,
+          title: '设置',
+          route: '/setting'
+        }
+      ]
     }
   }
+}
 </script>
 
 <style scoped>
-  a {
-    margin: 0 10px;
-    color: #409EFF
-  }
+a {
+  margin: 0 10px;
+  color: #409eff;
+}
 </style>
