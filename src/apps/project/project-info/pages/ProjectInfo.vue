@@ -4,16 +4,19 @@
 
 <script>
 export default {
-  name: 'ProjectInfo'
+  name: 'ProjectInfo',
+  mounted () {
+    console.log(this.$project)
+  }
 }
 </script>
 
 <style scoped>
-  div {
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background: #edeff0;
-    text-align: center;
-  }
+div {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #edeff0;
+  text-align: center;
+}
 </style>
