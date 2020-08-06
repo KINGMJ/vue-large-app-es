@@ -1,0 +1,18 @@
+/* 使用el-popover 嵌套 panel */
+.el-popover.el-popover-panel {
+  padding: 0;
+  border: none;
+
+  &:empty {
+    display: none;
+  }
+
+  &[x-placement^=bottom] {
+    margin-top: 4px;
+  }
+
+  .panel {
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+}

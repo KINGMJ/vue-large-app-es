@@ -4,6 +4,7 @@ import projectJson from './mock.json'
 import Project from './Project.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import './main.scss'
 
 function bootstrap () {
   Vue.config.productionTip = false
