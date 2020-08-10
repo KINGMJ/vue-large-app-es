@@ -15,6 +15,11 @@ export default {
   name: 'ProjectSettings',
   components: {
     BasePanel
+  },
+  data () {
+    return {
+      visible: false
+    }
   }
 }
 </script>
