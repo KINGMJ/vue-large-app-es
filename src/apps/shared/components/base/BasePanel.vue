@@ -1,30 +1,32 @@
 <template>
   <el-popover
-    :value="true"
+    :value="visible"
     popper-class="el-popover-panel"
     :placement="placement"
     trigger="manual"
     :visible-arrow="false"
+    width="260"
     transition
   >
     <div class="panel panel-default">
       <div class="panel-heading">
-        <span>添加成员</span>
-        <i class="el-icon el-icon-close" />
+        <span>{{ title }}</span>
+        <i
+          class="el-icon el-icon-close"
+          @click="close"
+        />
       </div>
       <div class="panel-body">
-        <p>aaa</p>
-        <p>aaa</p>
-        <p>aaa</p>
-        <p>aaa</p>
-        <p>aaa</p>
+        <slot name="body" />
       </div>
       <div class="panel-footer">
-        <a href>新建标签</a>
+        <slot name="footer" />
       </div>
     </div>
-
-    <slot slot="reference" />
+    <slot
+      slot="reference"
+      name="reference"
+    />
   </el-popover>
 </template>
 
@@ -35,21 +37,29 @@ export default {
     placement: {
       type: String,
       default: ''
+    },
+    title: {
+      type: String,
+      default: ''
+    },
+    visible: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
-    return {
-      visible: true
+    return {}
+  },
+
+  methods: {
+    close (e) {
+      this.$emit('close', e)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-::v-deep .el-popover {
-  width: 260px;
-}
-
 .panel {
   margin-bottom: 20px;
   background-color: #fff;
@@ -99,5 +109,9 @@ export default {
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+}
+
+.panel-footer:empty {
+  display: none;
 }
 </style>

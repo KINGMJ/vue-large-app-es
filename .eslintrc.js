@@ -31,7 +31,7 @@ module.exports = {
     }
   ],
 
-  'extends': [
+  extends: [
     'plugin:vue/recommended',
     '@vue/standard'
   ]
