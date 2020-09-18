@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import ProjectBoardsRoute from '../project-boards/router/index'
-import ProjectFilesRoute from '../project-files/router/index'
-import ProjectStatsRoute from '../project-stats/router/index'
-import ProjectMembersRoute from '../project-members/router/index'
-import ProjectSettingsRoute from '../project-settings/router/index'
+import ProjectBoardsRoute from '../modules/project-boards/router/index'
+import ProjectFilesRoute from '../modules/project-files/router/index'
+import ProjectStatsRoute from '../modules/project-stats/router/index'
+import ProjectMembersRoute from '../modules/project-members/router/index'
+import ProjectSettingsRoute from '../modules/project-settings/router/index'
 
 Vue.use(VueRouter)
 const router = new VueRouter()

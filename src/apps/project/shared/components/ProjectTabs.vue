@@ -48,6 +48,12 @@ export default {
 </script>
 
 <style scoped>
+div {
+  background: #edeff0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
 a {
   margin: 0 10px;
   color: #409eff;

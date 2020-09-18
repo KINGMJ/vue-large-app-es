@@ -2,7 +2,7 @@
 <template>
   <div>
     <app-header />
-    <project-info />
+    <project-info :project-info="projectInfo" />
     <project-tabs />
     <router-view />
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 import AppHeader from '@/apps/shared/pages/AppHeader.vue'
-import ProjectInfo from '../project-info/pages/ProjectInfo.vue'
+import ProjectInfo from '../modules/project-info/components/ProjectInfo.vue'
 import ProjectTabs from '../shared/components/ProjectTabs.vue'
 
 export default {
@@ -19,6 +19,11 @@ export default {
     AppHeader,
     ProjectInfo,
     ProjectTabs
+  },
+  data () {
+    return {
+      projectInfo: this.$project.project_info
+    }
   }
 }
 </script>
