@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AppHeader from '@/apps/shared/pages/AppHeader.vue'
+import AppHeader from '@/apps/shared/components/AppHeader.vue'
 import ProjectInfo from '../modules/project-info/components/ProjectInfo.vue'
 import ProjectTabs from '../shared/components/ProjectTabs.vue'
 
