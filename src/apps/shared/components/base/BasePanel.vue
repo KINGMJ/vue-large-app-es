@@ -1,3 +1,4 @@
+<!-- 通用组件，可以在多个app内共享的组件，一般是自己实现的UI组件，跟基础组件的功能一样 -->
 <template>
   <el-popover
     :value="visible"
