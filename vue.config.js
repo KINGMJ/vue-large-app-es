@@ -19,6 +19,25 @@ module.exports = {
       entry: path.resolve(__appsPath, './project/core/index.js')
     }
   },
-
+  devServer: {
+    disableHostCheck: true,
+    host: 'dev.leangoo.com',
+    proxy: {
+      '/api': {
+        target: 'http://dev.leangoo.com:80',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' }
+      }
+    }
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        constant: path.resolve(__appsPath, './shared/constant/index.js'),
+        api: path.resolve(__appsPath, './shared/api/index.js')
+      }
+    }
+  },
   lintOnSave: false
 }
